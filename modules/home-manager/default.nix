@@ -53,12 +53,10 @@ in
         # (pkgs.python3.withPackages
          #  (ps: with ps; [ black numpy scipy networkx matplotlib ]))
         cachix
-        # comma
         curl
         fd
         ffmpeg
         gawk
-        # ghc
         git
         gnugrep
         gnupg
@@ -66,32 +64,16 @@ in
         htop
         httpie
         jq
-        # mmv
-        # neofetch
         nix
         nixfmt
         nixpkgs-fmt
-        # nodejs_latest
-        # openjdk
-        # openssh
-        # pandoc
-        # parallel
+        nodejs_latest
         pkgs.coreutils-full
-        # poetry
         pre-commit
-        # ranger
-        # (pkgs.ruby.withPackages (ps: with ps; [ rufo solargraph ]))
         ripgrep
         rsync
         shellcheck
-        # stylua
-        # sysdo
-        # tealdeer
-        # terraform
-        # treefmt
-        # vagrant
         yarn
       ];
     };
-
 }

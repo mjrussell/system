@@ -45,6 +45,7 @@
       ripgrep
 
       # languages
+      stack
     ];
     etc = {
       home-manager.source = "${inputs.home-manager}";

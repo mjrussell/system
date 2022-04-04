@@ -15,7 +15,6 @@
       "homebrew/core"
       "homebrew/services"
       "koekeishiya/formulae"
-      "teamookla/speedtest"
     ];
   };
 }
