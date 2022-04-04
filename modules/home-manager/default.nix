@@ -13,7 +13,8 @@ let
 
 in
 {
-  imports = [ ./vim ./cli ./kitty ./dotfiles ./git.nix ];
+  # imports = [ ./vim ./cli ./dotfiles ./git.nix ];
+  imports = [ ./git.nix ];
 
   programs.home-manager = {
     enable = true;
@@ -49,15 +50,15 @@ in
       # define package definitions for current user environment
       packages = with pkgs; [
         # python with default packages
-        (pkgs.python3.withPackages
-          (ps: with ps; [ black numpy scipy networkx matplotlib ]))
+        # (pkgs.python3.withPackages
+         #  (ps: with ps; [ black numpy scipy networkx matplotlib ]))
         cachix
         # comma
         curl
         fd
         ffmpeg
         gawk
-        ghc
+        # ghc
         git
         gnugrep
         gnupg
@@ -65,30 +66,30 @@ in
         htop
         httpie
         jq
-        mmv
-        neofetch
+        # mmv
+        # neofetch
         nix
         nixfmt
         nixpkgs-fmt
-        nodejs_latest
-        openjdk
-        openssh
-        pandoc
-        parallel
+        # nodejs_latest
+        # openjdk
+        # openssh
+        # pandoc
+        # parallel
         pkgs.coreutils-full
-        poetry
+        # poetry
         pre-commit
-        ranger
-        (pkgs.ruby.withPackages (ps: with ps; [ rufo solargraph ]))
+        # ranger
+        # (pkgs.ruby.withPackages (ps: with ps; [ rufo solargraph ]))
         ripgrep
         rsync
         shellcheck
-        stylua
-        sysdo
-        tealdeer
-        terraform
-        treefmt
-        vagrant
+        # stylua
+        # sysdo
+        # tealdeer
+        # terraform
+        # treefmt
+        # vagrant
         yarn
       ];
     };

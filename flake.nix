@@ -5,13 +5,13 @@
     substituters = [
       "https://cache.nixos.org"
       "https://nix-community.cachix.org"
-      "https://kclejeune.cachix.org"
+      "https://matthewrussell.cachix.org"
     ];
 
     trusted-public-keys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       "nix-community.cachix.org-1:mB9FSh9qf2dCimDSUo8Zy7bkq5CX+/rkCWyvRCYg3Fs="
-      "kclejeune.cachix.org-1:fOCrECygdFZKbMxHClhiTS6oowOkJ/I/dh9q9b1I4ko="
+      "matthewrussell.cachix.org-1:fOCrECygdFZKbMxHClhiTS6oowOkJ/I/dh9q9b1I4ko="
     ];
   };
 
@@ -170,9 +170,9 @@
           ];
         };
         work = mkDarwinConfig {
-          system = "x86_64-darwin";
+          system = "aarch64-darwin";
           extraModules =
-            [ ./profiles/work.nix ./modules/darwin/apps-minimal.nix ];
+            [ ./profiles/work.nix ./modules/darwin/apps.nix ];
         };
       };
 
@@ -188,21 +188,22 @@
 
       homeConfigurations = {
         server = mkHomeConfig {
-          username = "kclejeune";
+          username = "matthewrussell";
           extraModules = [ ./profiles/home-manager/personal.nix ];
         };
         darwinServer = mkHomeConfig {
-          username = "kclejeune";
+          username = "matthewrussell";
           system = "x86_64-darwin";
           extraModules = [ ./profiles/home-manager/personal.nix ];
         };
         darwinServerM1 = mkHomeConfig {
-          username = "kclejeune";
+          username = "matthewrussell";
           system = "aarch64-darwin";
           extraModules = [ ./profiles/home-manager/personal.nix ];
         };
         workServer = mkHomeConfig {
-          username = "lejeukc1";
+          username = "matthewrussell";
+          system = "aarch64-darwin";
           extraModules = [ ./profiles/home-manager/work.nix ];
         };
         vagrant = mkHomeConfig {

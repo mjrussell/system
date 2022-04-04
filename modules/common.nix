@@ -8,7 +8,7 @@
   };
 
   user = {
-    description = "Kennan LeJeune";
+    description = "Matthew Russell";
     home = "${
         if pkgs.stdenvNoCC.isDarwin then "/Users" else "/home"
       }/${config.user.name}";
@@ -45,8 +45,6 @@
       ripgrep
 
       # languages
-      python3
-      ruby
     ];
     etc = {
       home-manager.source = "${inputs.home-manager}";
@@ -57,5 +55,5 @@
     shells = with pkgs; [ bash zsh fish ];
   };
 
-  fonts.fonts = with pkgs; [ jetbrains-mono ];
+  # fonts.fonts = with pkgs; [ jetbrains-mono ];
 }
