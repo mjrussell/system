@@ -14,7 +14,7 @@ let
 in
 {
   # imports = [ ./vim ./cli ./dotfiles ./git.nix ];
-  imports = [ ./git.nix ];
+  imports = [ ./git.nix ./cli ];
 
   programs.home-manager = {
     enable = true;
@@ -40,10 +40,6 @@ in
         VISUAL = "nvim";
         CLICOLOR = 1;
         LSCOLORS = "ExFxBxDxCxegedabagacad";
-        KAGGLE_CONFIG_DIR = "${config.xdg.configHome}/kaggle";
-        JAVA_HOME = "${pkgs.openjdk.home}";
-        NODE_PATH = "${NODE_GLOBAL}/lib";
-        # HOMEBREW_NO_AUTO_UPDATE = 1;
       };
       sessionPath = [ "${NODE_GLOBAL}/bin" ];
 

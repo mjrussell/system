@@ -6,11 +6,11 @@
     enableCompletion = true;
     enableBashCompletion = true;
     interactiveShellInit = ''
+      # Todo move to homemanager/darwin section
       export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"
       export PATH="/opt/homebrew/bin:$PATH"
       export LDFLAGS="-L/opt/homebrew/opt/postgresql@12/lib"
       export CPPFLAGS="-I/opt/homebrew/opt/postgresql@12/include"
-      source ${pkgs.autojump}/share/autojump/autojump.zsh
     '';
   };
 
