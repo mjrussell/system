@@ -5,6 +5,13 @@
     enable = true;
     enableCompletion = true;
     enableBashCompletion = true;
+    interactiveShellInit = ''
+      export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"
+      export PATH="/opt/homebrew/bin:$PATH"
+      export LDFLAGS="-L/opt/homebrew/opt/postgresql@12/lib"
+      export CPPFLAGS="-I/opt/homebrew/opt/postgresql@12/include"
+      source ${pkgs.autojump}/share/autojump/autojump.zsh
+    '';
   };
 
   user = {
@@ -33,6 +40,7 @@
       neovim
 
       # standard toolset
+      autojump
       coreutils-full
       curl
       wget
@@ -44,8 +52,6 @@
       fzf
       ripgrep
 
-      # languages
-      stack
     ];
     etc = {
       home-manager.source = "${inputs.home-manager}";
