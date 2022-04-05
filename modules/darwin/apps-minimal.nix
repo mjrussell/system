@@ -11,6 +11,7 @@
       "flyway"
       "postgresql@12"
       "stack"
+      "haskell-language-server"
     ];
   };
 }
