@@ -73,7 +73,6 @@ in
         ripgrep
         rsync
         shellcheck
-        yarn
       ];
     };
 }

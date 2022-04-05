@@ -1,12 +1,5 @@
 { config, pkgs, ... }: {
   system.defaults = {
-    # login window settings
-    loginwindow = {
-      # disable guest account
-      GuestEnabled = false;
-      # show name instead of username
-      SHOWFULLNAME = false;
-    };
 
     # file viewer settings
     finder = {
@@ -16,28 +9,20 @@
     };
 
     # trackpad settings
-    trackpad = {
-      # silent clicking = 0, default = 1
-      ActuationStrength = 0;
-      # enable tap to click
-      Clicking = true;
-      # firmness level, 0 = lightest, 2 = heaviest
-      FirstClickThreshold = 1;
-      # firmness level for force touch
-      SecondClickThreshold = 1;
-      # don't allow positional right click
-      TrackpadRightClick = false;
-      # three finger drag for space switching
-      # TrackpadThreeFingerDrag = true;
-    };
-
-    # firewall settings
-    alf = {
-      # 0 = disabled 1 = enabled 2 = blocks all connections except for essential services
-      globalstate = 1;
-      loggingenabled = 0;
-      stealthenabled = 1;
-    };
+#    trackpad = {
+#      # silent clicking = 0, default = 1
+#      ActuationStrength = 0;
+#      # enable tap to click
+#      Clicking = true;
+#      # firmness level, 0 = lightest, 2 = heaviest
+#      FirstClickThreshold = 1;
+#      # firmness level for force touch
+#      SecondClickThreshold = 1;
+#      # don't allow positional right click
+#      TrackpadRightClick = false;
+#      # three finger drag for space switching
+#      # TrackpadThreeFingerDrag = true;
+#    };
 
     # dock settings
     dock = {
@@ -69,5 +54,4 @@
       AppleShowScrollBars = "Automatic";
     };
   };
-
 }
