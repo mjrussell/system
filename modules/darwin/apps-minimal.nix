@@ -8,6 +8,7 @@
     ];
 
     brews = [
+      "flyway"
       "postgresql@12"
       "stack"
     ];

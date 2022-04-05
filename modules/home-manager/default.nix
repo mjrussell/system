@@ -45,9 +45,6 @@ in
 
       # define package definitions for current user environment
       packages = with pkgs; [
-        # python with default packages
-        # (pkgs.python3.withPackages
-         #  (ps: with ps; [ black numpy scipy networkx matplotlib ]))
         cachix
         curl
         fd
@@ -63,9 +60,9 @@ in
         nix
         nixfmt
         nixpkgs-fmt
-        nodejs_latest
         pkgs.coreutils-full
         pre-commit
+        python
         ripgrep
         rsync
         shellcheck
