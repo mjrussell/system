@@ -41,6 +41,7 @@
 
       # standard toolset
       autojump
+      aws
       coreutils-full
       curl
       wget
