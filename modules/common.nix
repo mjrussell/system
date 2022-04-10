@@ -61,7 +61,7 @@
       stable.source = "${inputs.stable}";
     };
     # list of acceptable shells in /etc/shells
-    shells = with pkgs; [ bash zsh fish ];
+    shells = with pkgs; [ bash zsh ];
   };
 
   fonts.fonts = with pkgs; [
