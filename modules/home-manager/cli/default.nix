@@ -59,18 +59,6 @@ in
     starship = {
       enable = true;
       package = pkgs.stable.starship;
-      settings = {
-        format = lib.concatStrings [
-          "$directory"
-          "$git_branch"
-          "$git_commit"
-          "$git_state"
-          "$git_metrics"
-          "$git_status"
-          "$haskell"
-          "$aws"
-        ];
-      };
     };
     zsh =
       let
@@ -103,6 +91,7 @@ in
             fi
           ''}
           unset RPS1
+          bindkey '^ ' autosuggest-accept
         '';
         profileExtra = ''
           ${lib.optionalString pkgs.stdenvNoCC.isLinux "[[ -e /etc/profile ]] && source /etc/profile"}
