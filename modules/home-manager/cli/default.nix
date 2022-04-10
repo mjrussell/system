@@ -56,6 +56,22 @@ in
       '';
     };
     nix-index.enable = false;
+    starship = {
+      enable = true;
+      package = pkgs.stable.starship;
+      settings = {
+        format = lib.concatStrings [
+          "$directory"
+          "$git_branch"
+          "$git_commit"
+          "$git_state"
+          "$git_metrics"
+          "$git_status"
+          "$haskell"
+          "$aws"
+        ];
+      };
+    };
     zsh =
       let
         mkZshPlugin = { pkg, file ? "${pkg.pname}.plugin.zsh" }: rec {

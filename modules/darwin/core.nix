@@ -15,6 +15,7 @@ in
     # systemPackages = [ ];
   };
 
+  # Attempts to remove some system installed fonts from Work
   # fonts.enableFontDir = true;
   nix.nixPath = [ "darwin=/etc/${config.environment.etc.darwin.target}" ];
   nix.extraOptions = ''
