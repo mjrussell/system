@@ -41,9 +41,10 @@
 
       # standard toolset
       autojump
-      aws
+      awscli2
       coreutils-full
       curl
+      gettext
       wget
       git
       jq
