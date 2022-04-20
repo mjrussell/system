@@ -5,6 +5,7 @@
       "raycast"
       "stats"
       "visual-studio-code"
+      "dash"
     ];
 
     brews = [
