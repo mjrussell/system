@@ -12,7 +12,9 @@
       "flyway"
       "postgresql@12"
       "stack"
-      "haskell-language-server"
+      # Commented out until brew has 1.7.0
+      # Using ghcup for now
+      # "haskell-language-server"
     ];
   };
 }
