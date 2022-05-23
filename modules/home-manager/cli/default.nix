@@ -73,6 +73,7 @@ in
            "$nix_shell"
            "$aws"
            "$cmd_duration"
+           "$character"
          ];
 
          git_status = {
