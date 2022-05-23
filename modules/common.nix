@@ -10,8 +10,6 @@
       export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"
       export PATH="/opt/homebrew/bin:$PATH"
       export PATH="/$HOME/.rd/bin:$PATH"
-      export LDFLAGS="-L/opt/homebrew/opt/postgresql@12/lib"
-      export CPPFLAGS="-I/opt/homebrew/opt/postgresql@12/include"
     '';
   };
 
