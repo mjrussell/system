@@ -8,8 +8,9 @@
       "dash"
     ];
 
+    cleanup = "uninstall";
+
     brews = [
-      "flyway"
       "postgresql@12"
     ];
   };

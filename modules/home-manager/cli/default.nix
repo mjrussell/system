@@ -59,6 +59,26 @@ in
     starship = {
       enable = true;
       package = pkgs.stable.starship;
+      settings = {
+        format = lib.concatStrings [
+           "$username"
+           "$hostname"
+           "$localip"
+           "$directory"
+           "$git_branch"
+           "$git_commit"
+           "$git_state"
+           "$git_metrics"
+           "$git_status"
+           "$nix_shell"
+           "$aws"
+           "$cmd_duration"
+         ];
+
+         git_status = {
+           stashed = "";
+         };
+      };
     };
     zsh =
       let
@@ -79,8 +99,6 @@ in
           CLICOLOR = 1;
           LS_COLORS = "ExFxBxDxCxegedabagacad";
           TERM = "xterm-256color";
-          NVM_AUTOLOAD = 1;
-          NVM_HOMEBREW = "$(brew --prefix nvm)";
         };
         shellAliases = aliases;
         initExtra = ''
@@ -97,6 +115,16 @@ in
           ${lib.optionalString pkgs.stdenvNoCC.isLinux "[[ -e /etc/profile ]] && source /etc/profile"}
         '';
         plugins = with pkgs; [
+          {
+             name = "zsh-nix-shell";
+             file = "nix-shell.plugin.zsh";
+             src = pkgs.fetchFromGitHub {
+               owner = "chisui";
+               repo = "zsh-nix-shell";
+               rev = "v0.5.0";
+               sha256 = "0za4aiwwrlawnia4f29msk822rj9bgcygw6a8a6iikiwzjjz0g91";
+             };
+           }
           (mkZshPlugin { pkg = zsh-autopair; })
           (mkZshPlugin { pkg = zsh-completions; })
           (mkZshPlugin { pkg = zsh-autosuggestions; })
@@ -108,7 +136,7 @@ in
         ];
         oh-my-zsh = {
           enable = true;
-          plugins = [ "git" "sudo" "nvm" ];
+          plugins = [ "git" "sudo" ];
         };
       };
   };

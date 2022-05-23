@@ -27,12 +27,12 @@
     # dock settings
     dock = {
       # auto show and hide dock
-      autohide = true;
+      autohide = false;
       # remove delay for showing dock
       autohide-delay = "0.0";
       # how fast is the dock showing animation
       autohide-time-modifier = "1.0";
-      tilesize = 50;
+      tilesize = 40;
       static-only = false;
       showhidden = false;
       show-recents = false;
@@ -49,7 +49,7 @@
       # delay before repeating keystrokes
       InitialKeyRepeat = 10;
       # delay between repeated keystrokes upon holding a key
-      KeyRepeat = 1;
+      KeyRepeat = 2;
       AppleShowAllExtensions = true;
       AppleShowScrollBars = "Automatic";
     };
