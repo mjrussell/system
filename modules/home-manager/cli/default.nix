@@ -73,9 +73,9 @@ in
            "$nix_shell"
            "$aws"
            "$cmd_duration"
+           "$line_break"
            "$character"
          ];
-
          git_status = {
            stashed = "";
          };
@@ -127,6 +127,7 @@ in
              };
            }
           (mkZshPlugin { pkg = zsh-autopair; })
+          (mkZshPlugin { pkg = zsh-bd; })
           (mkZshPlugin { pkg = zsh-completions; })
           (mkZshPlugin { pkg = zsh-autosuggestions; })
           (mkZshPlugin {
