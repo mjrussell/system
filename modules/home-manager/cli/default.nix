@@ -26,6 +26,10 @@ in
 {
   home.packages = [ pkgs.tree ];
   programs = {
+    direnv = {
+      enable = true;
+      nix-direnv.enable = true;
+    };
     autojump = {
       enable = true;
       enableBashIntegration = true;
