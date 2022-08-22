@@ -10,6 +10,7 @@
       export PATH="/opt/homebrew/opt/postgresql@12/bin:$PATH"
       export PATH="/opt/homebrew/bin:$PATH"
       export PATH="/$HOME/.rd/bin:$PATH"
+      ulimit -n 4096
     '';
   };
 
@@ -47,6 +48,7 @@
       wget
       git
       jq
+      watch
 
       # helpful shell stuff
       bat
