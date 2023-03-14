@@ -9,13 +9,15 @@ set encoding=utf-8
 set wildmenu
 set lazyredraw
 set ruler
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set showmatch
 set expandtab
-set softtabstop=4
+set smarttab
+set softtabstop=2
 set autoindent
 set smartindent
+
 
 " Keybindings
 nmap j gj

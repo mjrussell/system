@@ -8,7 +8,7 @@
     # ./latex
     # ./lspsaga-nvim
     # ./lua-lsp # build failure
-    ./lualine-nvim
+    # ./lualine-nvim
     # ./nvim-autopairs
     # ./nvim-cmp
     # ./nvim-lspconfig
@@ -20,10 +20,10 @@
     # ./vsnip
     # ./vue-lsp
     # ./yaml-lsp
-    ./coc
+    # ./coc
 
-    ./theme
-    ./treesitter
+    #./theme
+    # ./treesitter
     ./vim-closetag
     ./fzf
     # ./skim
