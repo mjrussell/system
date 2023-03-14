@@ -1,4 +1,4 @@
 { config, lib, pkgs, ... }: {
-  user.name = "matthewrussell";
+  user.name = "matt";
   hm = { imports = [ ./home-manager/personal.nix ]; };
 }

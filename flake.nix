@@ -169,6 +169,13 @@
             { homebrew.brewPrefix = "/opt/homebrew/bin"; }
           ];
         };
+        home-intel = mkDarwinConfig {
+          system = "x86_64-darwin";
+          extraModules = [
+            ./profiles/personal.nix
+            ./modules/darwin/apps.nix
+          ];
+        };
         work = mkDarwinConfig {
           system = "aarch64-darwin";
           extraModules =

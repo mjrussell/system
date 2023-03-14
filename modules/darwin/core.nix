@@ -15,15 +15,16 @@ in
     # systemPackages = [ ];
   };
 
-  # Attempts to remove some system installed fonts from Work
-  # fonts.enableFontDir = true;
+  fonts = {
+    fontDir.enable = config.user.name == "matt";
+  };
   nix.nixPath = [ "darwin=/etc/${config.environment.etc.darwin.target}" ];
   nix.extraOptions = ''
     extra-platforms = x86_64-darwin aarch64-darwin
   '';
 
   # auto manage nixbld users with nix darwin
-  users.nix.configureBuildUsers = true;
+  nix.configureBuildUsers = true;
 
   # Auto upgrade nix package and the daemon service.
   services.nix-daemon.enable = true;

@@ -14,7 +14,7 @@ let
 in
 {
   # imports = [ ./vim ./cli ./dotfiles ./git.nix ];
-  imports = [ ./git.nix ./cli ];
+  imports = [ ./git.nix ./cli ./1password.nix ];
 
   programs.home-manager = {
     enable = true;
@@ -55,7 +55,6 @@ in
         gnupg
         gnused
         htop
-        httpie
         jq
         nix
         nixfmt

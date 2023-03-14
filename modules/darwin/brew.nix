@@ -1,10 +1,13 @@
 { inputs, config, pkgs, ... }: {
   homebrew = {
     enable = true;
-    autoUpdate = false;
+    onActivation = {
+      cleanup = "uninstall";
+      autoUpdate = false;
+    };
+    
     global = {
       brewfile = true;
-      noLock = true;
     };
 
     taps = [

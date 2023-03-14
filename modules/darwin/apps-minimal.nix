@@ -8,8 +8,6 @@
       "dash"
     ];
 
-    cleanup = "uninstall";
-
     brews = [
       "postgresql@12"
     ];
