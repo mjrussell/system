@@ -32,7 +32,7 @@
       autohide-delay = 0.0;
       # how fast is the dock showing animation
       autohide-time-modifier = 1.0;
-      tilesize = 40;
+      tilesize = 50;
       static-only = false;
       showhidden = false;
       show-recents = false;
