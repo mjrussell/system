@@ -153,22 +153,6 @@
       );
 
       darwinConfigurations = {
-        randall = mkDarwinConfig {
-          system = "aarch64-darwin";
-          extraModules = [
-            ./profiles/personal.nix
-            ./modules/darwin/apps.nix
-            { homebrew.brewPrefix = "/opt/homebrew/bin"; }
-          ];
-        };
-        randall-intel = mkDarwinConfig {
-          system = "x86_64-darwin";
-          extraModules = [
-            ./profiles/personal.nix
-            ./modules/darwin/apps.nix
-            { homebrew.brewPrefix = "/opt/homebrew/bin"; }
-          ];
-        };
         home-intel = mkDarwinConfig {
           system = "x86_64-darwin";
           extraModules = [
@@ -178,8 +162,10 @@
         };
         work = mkDarwinConfig {
           system = "aarch64-darwin";
-          extraModules =
-            [ ./profiles/work.nix ./modules/darwin/apps.nix ];
+          extraModules = [ 
+            ./profiles/work.nix 
+            ./modules/darwin/apps.nix
+          ];
         };
       };
 
