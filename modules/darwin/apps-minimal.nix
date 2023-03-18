@@ -3,8 +3,10 @@
     casks = [
       "dash"
       "discord"
+      "hot"
       "insomnia"
       "raycast"
+      "slack"
       "stats"
       "todoist"
       "visual-studio-code"

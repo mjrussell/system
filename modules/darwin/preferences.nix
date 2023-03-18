@@ -53,5 +53,9 @@
       AppleShowAllExtensions = true;
       AppleShowScrollBars = "Automatic";
     };
+
+  };
+  system.keyboard = {
+    remapCapsLockToEscape = true;
   };
 }
