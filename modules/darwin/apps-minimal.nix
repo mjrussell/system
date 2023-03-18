@@ -1,11 +1,13 @@
 { config, lib, pkgs, ... }: {
   homebrew = {
     casks = [
+      "dash"
       "discord"
+      "insomnia"
       "raycast"
       "stats"
+      "todoist"
       "visual-studio-code"
-      "dash"
     ];
 
     brews = [
