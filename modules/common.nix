@@ -54,6 +54,7 @@
       bat
       fzf
       ripgrep
+      ncdu
 
     ];
     etc = {
