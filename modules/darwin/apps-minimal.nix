@@ -6,6 +6,7 @@
       "hot"
       "insomnia"
       "raycast"
+      "rectangle"
       "slack"
       "stats"
       "todoist"
