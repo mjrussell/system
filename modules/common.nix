@@ -48,6 +48,8 @@
       wget
       git
       jq
+      mitmproxy
+      rclone
       watch
 
       # helpful shell stuff
