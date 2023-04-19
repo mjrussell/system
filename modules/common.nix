@@ -57,6 +57,7 @@
       fzf
       ripgrep
       ncdu
+      shellcheck
 
     ];
     etc = {
