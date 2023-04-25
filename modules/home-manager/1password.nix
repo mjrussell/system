@@ -51,11 +51,13 @@ in {
   };
 
   programs.git = {
-    gpg = {
-      format = "ssh";
-      ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+    extraConfig = {
+      gpg = {
+        format = "ssh";
+        ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
+      };
+      commit.gpgsign = true;
+      user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFsuQpHchfqyjLQoKLQt6KLtvGeGbJK6krwUxVLjbNzd";
     };
-    commit.gpgsign = true;
-    user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFsuQpHchfqyjLQoKLQt6KLtvGeGbJK6krwUxVLjbNzd";
   };
 }
