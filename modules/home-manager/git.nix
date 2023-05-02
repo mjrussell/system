@@ -15,6 +15,7 @@
       pull.rebase = true;
       push.followTags = true;
       core.editor = "vim";
+      push.autoSetupRemote = true;
     };
     aliases = {
       fix = "commit --amend --no-edit";
