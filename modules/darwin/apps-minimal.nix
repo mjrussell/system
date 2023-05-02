@@ -16,6 +16,7 @@
 
     brews = [
       "postgresql@12"
+      "mitmproxy"
     ];
   };
 }

@@ -48,7 +48,8 @@
       wget
       git
       jq
-      mitmproxy
+      # Broken currently
+      # mitmproxy
       rclone
       watch
 
