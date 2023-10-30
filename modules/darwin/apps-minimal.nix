@@ -11,7 +11,6 @@
       "stats"
       "todoist"
       "visual-studio-code"
-      "obsidian"
     ];
 
     brews = [
