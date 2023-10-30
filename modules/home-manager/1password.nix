@@ -57,7 +57,6 @@ in {
         ssh.program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign";
       };
       commit.gpgsign = true;
-      user.signingkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFsuQpHchfqyjLQoKLQt6KLtvGeGbJK6krwUxVLjbNzd";
     };
   };
 }
